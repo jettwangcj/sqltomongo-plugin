@@ -1,37 +1,27 @@
 # sqltomongo-plugin
 
-#### 介绍
+<!-- Plugin description -->
+
 一款用于将SQL语句翻译成Mongo语法的 idea 插件
 
-#### 软件架构
-软件架构说明
+# SQLToMongo 中文
+将SQL语句翻译成Mongo语法的插件  
+转换功能代码仓库：https://gitee.com/listen_w/sqltomongo-converter.git  
+插件代码仓库：https://gitee.com/listen_w/sqltomongo-plugin.git</p><br>  
+掘金个人博客：https://juejin.cn/user/3737995265185528
 
+# 使用
+![image.png](src/main/resources/img/start.png)
+![image.png](src/main/resources/img/demo1.png)
+![image.png](src/main/resources/img/demo3.png)
+![image.png](src/main/resources/img/demo2.png)
 
-#### 安装教程
+- 安装插件
+- 选中要执行的SQL，右键，选择“SQLToMongo”，然后就会将翻译好的结果复制下来，找个空白的地方粘贴即可
+- 或者不选中任何字符，右键，选择“SQLToMongo”，弹出对话框，在对话框完成翻译SQL过程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+# 特性
+- 支持大部分的SQL语句，比如 select、join、where、group、limit、order by、having、sort等。
+- 不支持 select * ，使用具体的字段
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+<!-- Plugin description end -->
