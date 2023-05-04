@@ -23,6 +23,9 @@
 
     ]]></description>
 
+    <version>1.0.0</version>
+    <idea-version since-build="221" until-build="231.*"/>
+
     <change-notes>
         <![CDATA[
           Add support for latest IDEs 2022.3.3
