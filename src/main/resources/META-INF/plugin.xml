@@ -4,22 +4,22 @@
     <vendor email="1558263804@qq.com" url="https://juejin.cn/user/3737995265185528">changjiu.wang</vendor>
 
     <description><![CDATA[
-    <h1>SQLToMongo 中文</h1><br>
-    <p>将SQL语句翻译成Mongo语法的插件</p><br>
-    <p>转换功能代码仓库：<a href="https://gitee.com/listen_w/sqltomongo-converter">https://gitee.com/listen_w/sqltomongo-converter</a></p><br>
-    <p>插件代码仓库：<a href="https://gitee.com/listen_w/sqltomongo-plugin">https://gitee.com/listen_w/sqltomongo-plugin</a></p><br>
-    <p>掘金个人博客：<a href="https://juejin.cn/user/3737995265185528">https://juejin.cn/user/3737995265185528</a> </p>
+    <h1>SQLToMongo </h1><br>
+    <p>A plugin for translating SQL statements into Mongo syntax</p><br>
+    <p>Conversion Function Code Warehouse：<a href="https://gitee.com/listen_w/sqltomongo-converter">https://gitee.com/listen_w/sqltomongo-converter</a></p><br>
+    <p>Plugin Code Warehouse：<a href="https://gitee.com/listen_w/sqltomongo-plugin">https://gitee.com/listen_w/sqltomongo-plugin</a></p><br>
+    <p>Digging Gold Personal Blog：<a href="https://juejin.cn/user/3737995265185528">https://juejin.cn/user/3737995265185528</a> </p>
 
-    <h1>使用</h1>
+    <h1>use</h1>
     <ul>
-      <li>安装插件</li>
-      <li>选中要执行的SQL，右键，选择“SQLToMongo”，然后就会将翻译好的结果复制下来，找个空白的地方粘贴即可</li>
-      <li>或者不选中任何字符，右键，选择“SQLToMongo”，弹出对话框，在对话框完成翻译SQL过程</li>
+      <li>Install plug-in</li>
+      <li>Select the SQL to be executed, right-click, select 'SQLToMongo', and the translated results will be copied and pasted in a blank space</li>
+      <li>Alternatively, without selecting any characters, right-click and select 'SQLToMongo' to pop up a dialog box where you can complete the SQL translation process</li>
     </ui>
 
-    <h1>特性</h1>
-    <p>支持大部分的SQL语句，比如 select、join、where、group、limit、order by、having、sort等</p><br>
-    <p>不支持 select * ，使用具体的字段</p><br>
+    <h1>characteristic</h1>
+    <p>Supports most SQL statements, such as select, join, where, group, limit, order by, having, sort, etc</p><br>
+    <p>Do not support select *, use specific fields</p><br>
 
     ]]></description>
 
@@ -33,6 +33,10 @@
     </change-notes>
 
     <depends>com.intellij.modules.platform</depends>
+    <!--<incompatible-with>intellij.profiler.common</incompatible-with>
+    <incompatible-with>intellij.profiler.ultimate.ideaAsyncProfiler</incompatible-with>
+    <incompatible-with>intellij.profiler.asyncWindows</incompatible-with>
+    <incompatible-with>intellij.profiler.asyncOne</incompatible-with>-->
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="cn.org.wangchangjiu.extension.TextProviderCache"/>
