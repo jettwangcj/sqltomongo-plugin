@@ -46,12 +46,12 @@ public class SQLConvertAction extends AnAction {
             Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
             StringSelection selection = new StringSelection(mongoText);
             clipboard.setContents(selection, null);
-            Notifications.Bus.notify(new Notification("SqlToMongoConvert", "SQL语法转Mongo语法",
+            Notifications.Bus.notify(new Notification("Print", "SQL语法转Mongo语法",
                     "转Mongo语法成功，并复制，请直接粘贴文本即可", NotificationType.INFORMATION), anActionEvent.getProject());
 
             SQLToMongoTextProvider.addCueWord(sqlText);
         } catch (Exception e){
-            Notifications.Bus.notify(new Notification("SqlToMongoConvert", "SQL语法转Mongo语法",
+            Notifications.Bus.notify(new Notification("Print", "SQL语法转Mongo语法",
                     e.getMessage(), NotificationType.ERROR), anActionEvent.getProject());
         }
     }

@@ -57,7 +57,7 @@ public class SQLConvertDialog extends DialogWrapper {
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 StringSelection selection = new StringSelection(mongoText);
                 clipboard.setContents(selection, null);
-                Notifications.Bus.notify(new Notification("SqlToMongoConvert", "SQL语法转Mongo语法",
+                Notifications.Bus.notify(new Notification("Print", "SQL语法转Mongo语法",
                         "复制成功", NotificationType.INFORMATION), anActionEvent.getProject());
             }
         });

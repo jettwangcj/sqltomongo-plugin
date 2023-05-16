@@ -23,7 +23,7 @@
 
     ]]></description>
 
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <idea-version since-build="221" until-build="231.*"/>
 
     <change-notes>
@@ -33,10 +33,6 @@
     </change-notes>
 
     <depends>com.intellij.modules.platform</depends>
-    <!--<incompatible-with>intellij.profiler.common</incompatible-with>
-    <incompatible-with>intellij.profiler.ultimate.ideaAsyncProfiler</incompatible-with>
-    <incompatible-with>intellij.profiler.asyncWindows</incompatible-with>
-    <incompatible-with>intellij.profiler.asyncOne</incompatible-with>-->
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="cn.org.wangchangjiu.extension.TextProviderCache"/>

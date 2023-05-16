@@ -3,12 +3,11 @@ import kotlin.collections.*
 plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.12.0"
-    /*id("org.jetbrains.kotlin.jvm") version "1.5.31"*/
 
 }
 
 group "cn.org.wangchangjiu"
-version "1.0.0"
+version "1.0.1"
 
 repositories {
     mavenLocal()
@@ -19,7 +18,6 @@ repositories {
 dependencies {
     testImplementation("junit:junit:4.13.2")
     implementation("cn.org.wangchangjiu:sqltomongo-converter:1.0.2.1-RELEASE")
-    //implementation(kotlin("stdlib"))
 }
 
 // Configure Gradle IntelliJ Pluginunresolved
@@ -53,7 +51,7 @@ tasks {
     }
 
     publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
+        token.set(System.getenv("perm:amV0dHdhbmdjag==.OTItODA0Mg==.Kmujv4p1NQ7AgAvBShvuVpZStbYEP5"))
     }
 
     runPluginVerifier {
