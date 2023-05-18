@@ -12,6 +12,9 @@ import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.editor.event.DocumentAdapter;
+import com.intellij.openapi.editor.event.DocumentEvent;
+import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.ui.GotItTooltip;
@@ -20,6 +23,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -117,6 +124,16 @@ public class SQLConvertDialog extends DialogWrapper {
         inputSqlText.setOneLineMode(false);
         inputSqlText.setAutoscrolls(true);
         inputSqlText.setEnabled(true);
+
+        inputSqlText.getDocument().addDocumentListener(new DocumentAdapter() {
+            @Override
+            public void documentChanged(DocumentEvent event) {
+
+
+
+            }
+        });
+
     }
 
 

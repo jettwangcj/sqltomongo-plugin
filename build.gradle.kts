@@ -24,9 +24,9 @@ dependencies {
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
     version.set("2022.1.4")
-    type.set("IU") // Target IDE Platform
+    type.set("IC") // Target IDE Platform
 
-    plugins.set(listOf(/* Plugin Dependencies */))
+    plugins.set(listOf())
 }
 
 
@@ -51,18 +51,8 @@ tasks {
     }
 
     publishPlugin {
-        token.set(System.getenv("perm:amV0dHdhbmdjag==.OTItODA0Mg==.Kmujv4p1NQ7AgAvBShvuVpZStbYEP5"))
+        token.set(System.getenv("PUBLISH_TOKEN"))
     }
-
-    runPluginVerifier {
-        ideVersions.set(listOf("2021.3.3"))
-      //  localPaths.set(listOf(file("build/distributions/sqltomongo-plugin.zip")))
-    }
-
-    jar {
-        from(configurations.runtimeClasspath.get().filter { it.name.endsWith(".jar") }.map { file(it) })
-    }
-
 }
 
 
