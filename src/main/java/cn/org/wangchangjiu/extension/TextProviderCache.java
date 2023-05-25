@@ -18,6 +18,9 @@ public class TextProviderCache implements PersistentStateComponent<TextProviderC
     public Set<String> items = new HashSet<>() ;
 
     public static TextProviderCache getInstance(Project project) {
+        if(project == null){
+            return null;
+        }
         return project.getService(TextProviderCache.class);
     }
 

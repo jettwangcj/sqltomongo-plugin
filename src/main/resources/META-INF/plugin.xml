@@ -23,11 +23,14 @@
 
     ]]></description>
 
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <idea-version since-build="221" until-build="231.*"/>
 
     <change-notes>
         <![CDATA[
+          1.0.2
+          - Fix the first installation of NullPointerException bug
+
           Add support for latest IDEs 2022.3.3
         ]]>
     </change-notes>

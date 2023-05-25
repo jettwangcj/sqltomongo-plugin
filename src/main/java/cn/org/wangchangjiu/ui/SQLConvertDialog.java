@@ -56,21 +56,22 @@ public class SQLConvertDialog extends DialogWrapper {
         copyBut.setText("copy");
         copyBut.setEnabled(false);
 
-        copyBut.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                String mongoText = outMongoText.getText();
-                // 获取需要复制的文本
-                Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                StringSelection selection = new StringSelection(mongoText);
-                clipboard.setContents(selection, null);
-                Notifications.Bus.notify(new Notification("Print", "SQL语法转Mongo语法",
-                        "复制成功", NotificationType.INFORMATION), anActionEvent.getProject());
-            }
+        copyBut.addActionListener(actionEvent -> {
+            String mongoText = outMongoText.getText();
+            // 获取需要复制的文本
+            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+            StringSelection selection = new StringSelection(mongoText);
+            clipboard.setContents(selection, null);
+            Notifications.Bus.notify(new Notification("Print", "SQL语法转Mongo语法",
+                    "复制成功", NotificationType.INFORMATION), anActionEvent.getProject());
         });
 
         // 加载自动提示词
-        SQLToMongoTextProvider.addAllCueWord(TextProviderCache.getInstance(ProjectManager.getInstance().getDefaultProject()).items);
+        TextProviderCache instance = TextProviderCache.getInstance(ProjectManager.getInstance().getDefaultProject());
+        if(instance != null && instance.items != null){
+            SQLToMongoTextProvider.addAllCueWord(instance.items);
+        }
+
     }
 
     @Override
@@ -124,16 +125,6 @@ public class SQLConvertDialog extends DialogWrapper {
         inputSqlText.setOneLineMode(false);
         inputSqlText.setAutoscrolls(true);
         inputSqlText.setEnabled(true);
-
-        inputSqlText.getDocument().addDocumentListener(new DocumentAdapter() {
-            @Override
-            public void documentChanged(DocumentEvent event) {
-
-
-
-            }
-        });
-
     }
 
 
